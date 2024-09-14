@@ -1,6 +1,4 @@
-# Proyecto de “Desarrollo de una aplicación web y móvil para el control de asistencia de estudiantes”
-
-## Historias de Usuario Appmovil - Sistema de Control de Asistencia
+# Historias de Usuario - Sistema de Control de Asistencia
 
 ## Aplicación Móvil (Estudiantes)
 
@@ -45,5 +43,3 @@ Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para
 2. Se debe poder adjuntar documentos o imágenes como prueba de la justificación.
 3. El sistema debe notificar al docente correspondiente sobre la justificación enviada.
 4. El estudiante debe poder ver el estado de sus justificaciones (pendiente, aprobada, rechazada).
-
-
