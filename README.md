@@ -1,2 +1,17 @@
-# proyecto-si8811b-2024-ii-u1-documentacion-pruebas-chavez-soto
-proyecto-si8811b-2024-ii-u1-documentacion-pruebas-chavez-soto created by GitHub Classroom
+# Proyecto de “Desarrollo de una aplicación web y móvil para el control de asistencia de estudiantes”
+
+## Objetivos del Proyecto
+
+### Objetivo General
+
+Desarrollar e implementar un sistema de control de asistencia de estudiantes que mejore la eficiencia en el seguimiento de la asistencia y promueva la responsabilidad de los alumnos.
+
+### Objetivos Específicos
+
+1. Diseñar y desarrollar una aplicación web para el registro y seguimiento de asistencia por parte de los docentes.
+
+2. Crear una aplicación móvil que notifique a los estudiantes sobre sus inasistencias acumuladas.
+
+3. Implementar un sistema de reportes en forma de tablas y gráficos para facilitar el análisis de la asistencia.
+
+4. Establecer una infraestructura en la nube utilizando Azure y Terraform para garantizar la escalabilidad y disponibilidad del sistema.
