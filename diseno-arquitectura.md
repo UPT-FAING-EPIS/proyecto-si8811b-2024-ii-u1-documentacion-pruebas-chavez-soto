@@ -7,7 +7,10 @@ El sistema de control de asistencia de estudiantes se basa en una arquitectura d
 ## Diagrama de Arquitectura
 
 El diagrama de arquitectura se encuentra en un artifact separado con el identificador "diagrama-arquitectura". Por favor, refiérase a ese artifact para una representación visual de la arquitectura del sistema.
+
+
 <img width="1133" alt="Captura de pantalla 2024-09-14 a la(s) 1 31 54 p  m" src="https://github.com/user-attachments/assets/5b93ab41-fe31-40d5-acdb-8e5ac61b114f">
+
 
 
 ## Componentes Principales
