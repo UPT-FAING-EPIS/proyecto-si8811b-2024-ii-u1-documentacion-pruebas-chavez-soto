@@ -1,45 +1,71 @@
-# Historias de Usuario - Sistema de Control de Asistencia
+# Plan de Proyecto: Sistema de Control de Asistencia de Estudiantes
 
-## Aplicación Móvil (Estudiantes)
+## 1. Fase de Inicio
 
-### HU-E01: Inicio de sesión móvil
-Como estudiante, quiero poder iniciar sesión en la aplicación móvil de forma segura, para acceder a mi información de asistencia.
+1.1. Definir el alcance detallado del proyecto
+1.2. Identificar a los stakeholders
+1.3. Establecer el equipo del proyecto
+1.4. Crear la carta del proyecto
 
-**Criterios de aceptación:**
-1. Debe haber un formulario de inicio de sesión con campos para usuario y contraseña.
-2. El sistema debe validar las credenciales del usuario.
-3. En caso de credenciales incorrectas, se debe mostrar un mensaje de error.
-4. Después de un inicio de sesión exitoso, se debe mostrar el dashboard del estudiante.
+## 2. Fase de Planificación
 
-### HU-E02: Visualización de resumen de asistencia
-Como estudiante, quiero poder ver un resumen de mi asistencia para cada clase, para estar al tanto de mi participación.
+2.1. Desarrollar el plan de gestión del proyecto
+2.2. Crear el cronograma detallado
+2.3. Estimar el presupuesto
+2.4. Planificar la gestión de riesgos
+2.5. Definir los planes de comunicación y calidad
 
-**Criterios de aceptación:**
-1. Debe haber una lista de todas las clases en las que está inscrito el estudiante.
-2. Para cada clase, se debe mostrar el número de asistencias, ausencias y retrasos.
-3. Debe ser posible ver el porcentaje de asistencia para cada clase.
+## 3. Fase de Diseño
 
-### HU-E03: Notificaciones de inasistencias
-Como estudiante, quiero recibir notificaciones sobre mi cantidad de inasistencias, para estar al tanto de mi situación académica.
+3.1. Realizar el análisis de requisitos detallado
+3.2. Diseñar la arquitectura del sistema
+3.3. Diseñar la base de datos
+3.4. Crear prototipos de la interfaz de usuario (web y móvil)
+3.5. Planificar la infraestructura en Azure
 
-**Criterios de aceptación:**
-1. La aplicación debe enviar notificaciones push cuando se alcancen ciertos umbrales de inasistencias.
-2. Las notificaciones deben ser claras y especificar la clase y el número de inasistencias.
-3. Debe ser posible configurar la frecuencia de las notificaciones.
+## 4. Fase de Desarrollo
 
-### HU-E04: Visualización de calendario de asistencia
-Como estudiante, quiero ver un calendario con mis días de asistencia e inasistencia, para tener una visión general de mi participación en clases.
+4.1. Configurar el entorno de desarrollo
+4.2. Desarrollar el backend (Node.js y Go)
+4.3. Desarrollar la aplicación web (JavaScript y JSON)
+4.4. Desarrollar la aplicación móvil (MAUI)
+4.5. Implementar la infraestructura en Azure usando Terraform
 
-**Criterios de aceptación:**
-1. Debe haber una vista de calendario mensual.
-2. Los días de asistencia, inasistencia y retraso deben estar claramente marcados con diferentes colores.
-3. Al tocar un día específico, se debe mostrar el detalle de las clases de ese día.
+## 5. Fase de Pruebas
 
-### HU-E05: Justificación de inasistencias
-Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para informar a mis docentes sobre las razones de mis ausencias.
+5.1. Desarrollar plan de pruebas
+5.2. Realizar pruebas unitarias
+5.3. Realizar pruebas de integración
+5.4. Realizar pruebas de usuario
+5.5. Realizar pruebas de seguridad
+5.6. Corregir errores y optimizar el rendimiento
 
-**Criterios de aceptación:**
-1. Debe haber una opción para justificar una inasistencia específica.
-2. Se debe poder adjuntar documentos o imágenes como prueba de la justificación.
-3. El sistema debe notificar al docente correspondiente sobre la justificación enviada.
-4. El estudiante debe poder ver el estado de sus justificaciones (pendiente, aprobada, rechazada).
+## 6. Fase de Implementación
+
+6.1. Preparar la documentación del usuario
+6.2. Realizar la capacitación de usuarios (docentes y estudiantes)
+6.3. Migrar datos existentes (si es necesario)
+6.4. Desplegar el sistema en producción
+6.5. Realizar pruebas finales en el entorno de producción
+
+## 7. Fase de Cierre
+
+7.1. Obtener la aceptación formal del cliente
+7.2. Cerrar los contratos con proveedores
+7.3. Realizar una reunión de retrospectiva del proyecto
+7.4. Archivar la documentación del proyecto
+7.5. Celebrar el éxito del proyecto
+
+## 8. Fase de Mantenimiento y Soporte
+
+8.1. Establecer procedimientos de soporte
+8.2. Monitorear el rendimiento del sistema
+8.3. Realizar actualizaciones y mantenimiento según sea necesario
+8.4. Recopilar feedback de los usuarios para futuras mejoras
+
+## Consideraciones Adicionales
+
+- Gestión continua de riesgos a lo largo del proyecto
+- Reuniones regulares de seguimiento con el equipo y los stakeholders
+- Actualización constante de la documentación del proyecto
+- Asegurar el cumplimiento de las regulaciones legales sobre manejo de datos de estudiantes
