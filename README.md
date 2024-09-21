@@ -182,16 +182,13 @@
 #### HU-D01: Inicio de sesión
 Como docente, quiero poder iniciar sesión en la aplicación web de forma segura, para acceder a las funcionalidades del sistema.
 
-#### HU-D02: Registro de asistencia
-Como docente, quiero poder registrar la asistencia de los estudiantes para cada clase, para mantener un registro preciso de la participación.
-
-#### HU-D03: Generación de reportes
+#### HU-D02: Generación de reportes
 Como docente, quiero poder generar reportes de asistencia en forma de tablas y gráficos, para analizar las tendencias de asistencia.
 
-#### HU-D04: Modificación de registros de asistencia
+#### HU-D03: Modificación de registros de asistencia
 Como docente, quiero poder modificar registros de asistencia pasados, para corregir errores o actualizar información.
 
-#### HU-D05: Visualización de tendencias
+#### HU-D04: Visualización de tendencias
 Como docente, quiero poder ver tendencias de asistencia por estudiante, clase o período, para identificar patrones y tomar decisiones informadas.
 
 ### Estudiantes
