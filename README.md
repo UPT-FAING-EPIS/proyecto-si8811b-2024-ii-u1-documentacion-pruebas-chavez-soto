@@ -1,6 +1,6 @@
 # Proyecto "Desarrollo de una aplicación web y móvil para el control de asistencia de estudiantes"
 
-## Historias de Usuario Web
+## Historias de Usuario para Docentes
 
 ### HU-D01: Inicio de sesión
 Como docente, quiero poder iniciar sesión en la aplicación web de forma segura, para acceder a las funcionalidades del sistema.
