@@ -6,7 +6,7 @@
 
 #### Requerimientos Funcionales
 
-1. Aplicación Web (para docentes):
+1. Rol de Docente:
    - RF1: Permitir a los docentes iniciar sesión de forma segura.
    - RF2: Permitir a los docentes registrar la asistencia de los estudiantes para cada clase.
    - RF3: Generar reportes de asistencia en forma de tablas y gráficos.
@@ -15,7 +15,7 @@
    - RF6: Proporcionar una función de búsqueda para encontrar rápidamente estudiantes o clases específicas.
    - RF7: Permitir la exportación de reportes de asistencia en formatos comunes (PDF, Excel).
 
-2. Aplicación Móvil (para estudiantes):
+2. Rol de estudiante:
    - RF8: Permitir a los estudiantes iniciar sesión de forma segura.
    - RF9: Mostrar el resumen de asistencia del estudiante para cada clase.
    - RF10: Enviar notificaciones push a los estudiantes sobre su cantidad de inasistencias.
@@ -175,9 +175,9 @@
 - Asegurar el cumplimiento de las regulaciones legales sobre manejo de datos de estudiantes
   
 
-## Historias de Usuario Web y Movil
+## Historias de Usuario
 
-### Aplicación Web (Docentes)
+### Docentes
 
 #### HU-D01: Inicio de sesión
 Como docente, quiero poder iniciar sesión en la aplicación web de forma segura, para acceder a las funcionalidades del sistema.
@@ -194,7 +194,7 @@ Como docente, quiero poder modificar registros de asistencia pasados, para corre
 #### HU-D05: Visualización de tendencias
 Como docente, quiero poder ver tendencias de asistencia por estudiante, clase o período, para identificar patrones y tomar decisiones informadas.
 
-### Aplicación Móvil (Estudiantes)
+### Estudiantes
 
 #### HU-E01: Inicio de sesión móvil
 Como estudiante, quiero poder iniciar sesión en la aplicación móvil de forma segura, para acceder a mi información de asistencia.
