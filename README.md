@@ -45,7 +45,7 @@ Como docente, quiero poder ver tendencias de asistencia por estudiante, clase o 
 2. Se deben mostrar gráficos interactivos que ilustren las tendencias de asistencia.
 3. Debe ser posible filtrar las tendencias por estudiante, clase y período de tiempo.
 
-## Estudiantes
+## Historias de Usuario para Estudiantes
 
 ### HU-E01: Inicio de sesión móvil
 Como estudiante, quiero poder iniciar sesión en la aplicación móvil de forma segura, para acceder a mi información de asistencia.
