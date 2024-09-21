@@ -2,7 +2,7 @@
 
 ## Historias de Usuario Appmovil - Sistema de Control de Asistencia
 
-## Aplicación Móvil (Estudiantes)
+## Estudiantes
 
 ### HU-E01: Inicio de sesión móvil
 Como estudiante, quiero poder iniciar sesión en la aplicación móvil de forma segura, para acceder a mi información de asistencia.
