@@ -4,7 +4,7 @@
 
 ### Objetivo General
 
-Desarrollar e implementar un sistema de control de asistencia de estudiantes que mejore la eficiencia en el seguimiento de la asistencia y promueva la responsabilidad de los alumnos.
+Desarrollar e implementar un sistema integral de control de asistencia de estudiantes que optimice la eficiencia en el seguimiento de la asistencia y promueva la responsabilidad de los alumnos, mediante una aplicación móvil y un registro web que permitan un control de asistencia automático y en tiempo real. 
 
 ### Objetivos Específicos
 
