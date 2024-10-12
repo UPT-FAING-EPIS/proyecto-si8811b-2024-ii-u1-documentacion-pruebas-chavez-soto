@@ -217,7 +217,7 @@ Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para
 
 1. **Frontend**
    - **Aplicación Web (JS)**: Interfaz para docentes desarrollada en JavaScript.
-   - **Aplicación Móvil (MAUI)**: Aplicación para estudiantes desarrollada con MAUI.
+   - **Aplicación Móvil (Flutter)**: Aplicación para estudiantes desarrollada con Flutter.
 
 2. **Backend**
    - **API Gateway**: Punto de entrada único para todas las solicitudes del cliente.
