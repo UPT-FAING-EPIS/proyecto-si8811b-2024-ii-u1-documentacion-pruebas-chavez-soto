@@ -1,0 +1,24 @@
+name: Documentación
+
+on:
+  push:
+    branches: [ "Cesar" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Generar documentación
+        run: npm run docs
+
+      - name: Publicar documentación en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
