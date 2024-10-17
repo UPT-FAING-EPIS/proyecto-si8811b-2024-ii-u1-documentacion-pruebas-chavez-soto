@@ -209,6 +209,81 @@ Como estudiante, quiero ver un calendario con mis días de asistencia e inasiste
 #### HU-E05: Justificación de inasistencias
 Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para informar a mis docentes sobre las razones de mis ausencias.
 
+## Diagrama Arquitectura Completo
+```mermaid
+graph TB
+    subgraph "Frontend"
+        WebApp[Aplicación Web JS]
+        MobileApp[Aplicación Móvil Flutter]
+    end
+
+    subgraph "Backend"
+        APIGateway[API Gateway]
+        AuthService[Servicio de Autenticación]
+        AttendanceService[Servicio de Gestión de Asistencia]
+        NotificationService[Servicio de Notificaciones]
+        ReportService[Servicio de Reportes]
+    end
+
+    subgraph "Base de Datos"
+        MainDB[(Base de Datos Principal)]
+        CacheDB[(Base de Datos de Caché)]
+    end
+
+    subgraph "Azure Cloud"
+        AppService[Azure App Service]
+        Functions[Azure Functions]
+        Storage[Azure Storage]
+        RG[Resource Group]
+        SA[Storage Account]
+        BC[Blob Container]
+    end
+
+    WebApp --> APIGateway
+    MobileApp --> APIGateway
+    APIGateway --> AuthService
+    APIGateway --> AttendanceService
+    APIGateway --> NotificationService
+    APIGateway --> ReportService
+
+    AuthService --> MainDB
+    AttendanceService --> MainDB
+    AttendanceService --> CacheDB
+    NotificationService --> MainDB
+    ReportService --> MainDB
+    ReportService --> CacheDB
+
+    AppService --> APIGateway
+    AppService --> AuthService
+    AppService --> AttendanceService
+    AppService --> NotificationService
+    AppService --> ReportService
+
+    Functions --> NotificationService
+    Functions --> ReportService
+
+    Storage --> BC
+
+    RG --> SA
+    SA --> BC
+
+    style WebApp fill:#f9f,stroke:#333,stroke-width:2px
+    style MobileApp fill:#f9f,stroke:#333,stroke-width:2px
+    style APIGateway fill:#bbf,stroke:#333,stroke-width:2px
+    style AuthService fill:#bbf,stroke:#333,stroke-width:2px
+    style AttendanceService fill:#bbf,stroke:#333,stroke-width:2px
+    style NotificationService fill:#bbf,stroke:#333,stroke-width:2px
+    style ReportService fill:#bbf,stroke:#333,stroke-width:2px
+    style MainDB fill:#bfb,stroke:#333,stroke-width:2px
+    style CacheDB fill:#bfb,stroke:#333,stroke-width:2px
+    style AppService fill:#fbb,stroke:#333,stroke-width:2px
+    style Functions fill:#fbb,stroke:#333,stroke-width:2px
+    style Storage fill:#fbb,stroke:#333,stroke-width:2px
+    style RG fill:#fbb,stroke:#333,stroke-width:2px
+    style SA fill:#fbb,stroke:#333,stroke-width:2px
+    style BC fill:#fbb,stroke:#333,stroke-width:2px
+```
+
 ## Diagrama de Arquitectura: Terraform con Backend Azure
 
 ```mermaid
