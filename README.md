@@ -209,9 +209,97 @@ Como estudiante, quiero ver un calendario con mis días de asistencia e inasiste
 #### HU-E05: Justificación de inasistencias
 Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para informar a mis docentes sobre las razones de mis ausencias.
 
-## Diseño y Arquitectura
+## Arquitectura
 
 <img width="1133" alt="Captura de pantalla 2024-09-14 a la(s) 1 31 54 p  m" src="https://github.com/user-attachments/assets/04628851-7bae-4b69-afed-b18768034647">
+
+## Diagramas de Clases del Backend
+
+### Diagrama de Clases - Autenticación
+
+```mermaid
+classDiagram
+    class AuthController {
+        +createAccount(email, password)
+        +login(email, password)
+        +requestConfirmationCode(email)
+        +forgotPassword(email)
+        +validateToken(token)
+        +updatePasswordWithToken(token, newPassword)
+        +user()
+        -hashPassword(password)
+        -checkPassword(password, hashedPassword)
+        -generateJWT(user)
+    }
+    
+    class User {
+        +email: String
+        +password: String
+        +confirmed: Boolean
+        +save()
+        +findOne(query)
+    }
+    
+    class Token {
+        +userId: ObjectId
+        +token: String
+        +createdAt: Date
+        +save()
+        +findOne(query)
+    }
+    
+    class EmailService {
+        +sendConfirmationEmail(email, token)
+        +sendPasswordResetEmail(email, token)
+    }
+    
+    AuthController --> User : uses
+    AuthController --> Token : uses
+    AuthController --> EmailService : uses
+```
+
+### Diagrama de Clases - Sincronización
+
+```mermaid
+classDiagram
+    class SyncController {
+        +syncUserData(codigo, contrasena)
+        +syncUserSchedule(codigo, contrasena)
+        +syncUserAttendance(codigo, contrasena)
+        +syncUserCredits(codigo, contrasena)
+        -processScheduleData(rawData)
+    }
+    
+    class IntranetSync {
+        +autenticar(codigo, contrasena)
+        +autenticarYExtraerHorario(codigo, contrasena)
+        +autenticarYExtraerAsistencias(codigo, contrasena)
+        +autenticarYExtraerCreditos(codigo, contrasena)
+    }
+    
+    class Schedule {
+        +userId: ObjectId
+        +scheduleData: Object
+        +save()
+    }
+    
+    class Attendance {
+        +userId: ObjectId
+        +attendanceData: Object
+        +save()
+    }
+    
+    class Credit {
+        +userId: ObjectId
+        +creditData: Object
+        +save()
+    }
+    
+    SyncController --> IntranetSync : uses
+    SyncController --> Schedule : uses
+    SyncController --> Attendance : uses
+    SyncController --> Credit : uses
+```
 
 ### Componentes Principales
 
