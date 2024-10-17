@@ -403,7 +403,72 @@ classDiagram
     SyncController --> Attendance : uses
     SyncController --> Credit : uses
 ```
-
+### Modelo de Datos
+```mermaid
+classDiagram
+    class User {
+        +id: ObjectId
+        +email: String
+        +password: String
+        +role: String
+        +confirmed: Boolean
+    }
+    
+    class Student {
+        +id: ObjectId
+        +userId: ObjectId
+        +studentCode: String
+        +name: String
+        +lastName: String
+    }
+    
+    class Teacher {
+        +id: ObjectId
+        +userId: ObjectId
+        +teacherCode: String
+        +name: String
+        +lastName: String
+    }
+    
+    class Course {
+        +id: ObjectId
+        +code: String
+        +name: String
+        +teacherId: ObjectId
+    }
+    
+    class Class {
+        +id: ObjectId
+        +courseId: ObjectId
+        +date: Date
+        +startTime: Time
+        +endTime: Time
+    }
+    
+    class Attendance {
+        +id: ObjectId
+        +classId: ObjectId
+        +studentId: ObjectId
+        +status: String
+        +justification: String
+    }
+    
+    class Notification {
+        +id: ObjectId
+        +userId: ObjectId
+        +message: String
+        +createdAt: Date
+        +read: Boolean
+    }
+    
+    User <|-- Student : extends
+    User <|-- Teacher : extends
+    Teacher "1" -- "*" Course : teaches
+    Course "1" -- "*" Class : has
+    Class "1" -- "*" Attendance : records
+    Student "1" -- "*" Attendance : has
+    User "1" -- "*" Notification : receives
+```
 ### Componentes Principales
 
 1. **Frontend**
