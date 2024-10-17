@@ -209,9 +209,37 @@ Como estudiante, quiero ver un calendario con mis días de asistencia e inasiste
 #### HU-E05: Justificación de inasistencias
 Como estudiante, quiero poder enviar justificaciones por mis inasistencias, para informar a mis docentes sobre las razones de mis ausencias.
 
-## Arquitectura
+## Diagrama de Arquitectura: Terraform con Backend Azure
 
-<img width="1133" alt="Captura de pantalla 2024-09-14 a la(s) 1 31 54 p  m" src="https://github.com/user-attachments/assets/04628851-7bae-4b69-afed-b18768034647">
+```mermaid
+graph TD
+    subgraph "Azure Cloud"
+        RG[Resource Group]
+        SA[Storage Account]
+        BC[Blob Container]
+        
+        RG --> SA
+        SA --> BC
+    end
+    
+    subgraph "Local Environment"
+        TF[Terraform]
+        TC[Terraform Configuration Files]
+        
+        TF --> TC
+    end
+    
+    TF -.-> |Store State| BC
+    TF -.-> |Read State| BC
+    
+    style RG fill:#f9f,stroke:#333,stroke-width:2px
+    style SA fill:#bbf,stroke:#333,stroke-width:2px
+    style BC fill:#bfb,stroke:#333,stroke-width:2px
+    style TF fill:#ff9,stroke:#333,stroke-width:2px
+    style TC fill:#f96,stroke:#333,stroke-width:2px
+```
+
+Este diagrama muestra la configuración del backend remoto de Terraform en Azure. El Resource Group en Azure contiene una Storage Account, que a su vez alberga un Blob Container. Terraform, ejecutado en el entorno local, interactúa con este Blob Container para almacenar y leer el estado de la infraestructura.
 
 ## Diagramas de Clases del Backend
 
